@@ -1,0 +1,406 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #19532b;
+  background: #f8f6ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f6ed;
+}
+
+.navbar {
+  height: 76px;
+  padding: 0 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #19532b;
+  color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #ffca26;
+}
+
+.brand svg {
+  width: 25px;
+  height: 25px;
+}
+
+.secure-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #f5f1df;
+}
+
+.main-content {
+  width: min(100% - 32px, 620px);
+  margin: auto;
+  padding: 55px 0;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: #ffca26;
+  color: #19532b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 17px;
+}
+
+.intro h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  color: #19532b;
+  margin-bottom: 12px;
+}
+
+.intro p {
+  color: #68766a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.generator {
+  padding: 30px;
+  background: white;
+  border: 1px solid #e6e4d8;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(25, 83, 43, 0.08);
+}
+
+.section-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #68766a;
+  margin-bottom: 12px;
+}
+
+.password-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+  padding: 10px 12px 10px 17px;
+  border: 1px solid #d9e2d8;
+  border-radius: 10px;
+  background: #f7f9f4;
+  margin-bottom: 28px;
+}
+
+.password-display span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 700;
+  color: #19532b;
+}
+
+.password-display button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 12px;
+  background: #ffca26;
+  color: #19532b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.password-display button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.password-display button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.length-section {
+  margin-bottom: 28px;
+}
+
+.setting-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.setting-heading strong {
+  color: #19532b;
+  background: #ffca26;
+  padding: 5px 12px;
+  border-radius: 7px;
+}
+
+.length-section input {
+  width: 100%;
+  accent-color: #19532b;
+  cursor: pointer;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #879087;
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.options-section {
+  margin-bottom: 25px;
+}
+
+.options-section h3 {
+  font-size: 14px;
+  color: #19532b;
+  margin-bottom: 13px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid #efefe8;
+  color: #394b3c;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option input {
+  width: 17px;
+  height: 17px;
+  accent-color: #19532b;
+  cursor: pointer;
+}
+
+.generate-btn {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #19532b;
+  color: #ffca26;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.generate-btn:hover {
+  background: #103e20;
+  transform: translateY(-2px);
+}
+
+.security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: #68766a;
+  font-size: 11px;
+  text-align: center;
+}
+
+.security-note svg {
+  color: #19532b;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  color: #68766a;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 65px;
+    padding: 0 18px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .secure-label {
+    font-size: 10px;
+  }
+
+  .main-content {
+    padding: 38px 0;
+  }
+
+  .generator {
+    padding: 21px 17px;
+  }
+
+  .intro h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 380px) {
+  .secure-label {
+    font-size: 0;
+  }
+
+  .secure-label svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+/* FIXED SCREEN - DESKTOP */
+
+@media (min-width: 601px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .app {
+    height: 100vh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar {
+    flex-shrink: 0;
+  }
+
+  .main-content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .intro {
+    margin-bottom: 18px;
+  }
+
+  .intro h1 {
+    font-size: 32px;
+    margin-bottom: 7px;
+  }
+
+  .intro p {
+    font-size: 13px;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .generator {
+    padding: 22px 30px;
+  }
+
+  .password-display {
+    margin-bottom: 18px;
+    min-height: 52px;
+  }
+
+  .length-section {
+    margin-bottom: 17px;
+  }
+
+  .option {
+    padding: 9px 0;
+  }
+
+  .options-section {
+    margin-bottom: 18px;
+  }
+
+  .security-note {
+    margin-top: 12px;
+  }
+
+  footer {
+    flex-shrink: 0;
+    padding: 12px;
+  }
+}
+
+/* MOBILE SCROLL */
+
+@media (max-width: 600px) {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  .app {
+    min-height: 100vh;
+  }
+}
